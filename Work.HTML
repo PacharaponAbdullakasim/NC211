@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Text input fields</h2>
+
+<form action="/action_page.php" target="_blank" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Patcharapon"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Abdullakasim"><br>
+  <input type="submit" value="Submit"> <input type="reset">
+</form>
+<h2>คนทำเว็บไซต์ต้องการเกรดอะไรจากอาจาร์ย</h2>
+
+<form>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">เกรด A </label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">เกรด A </label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">เกรด A </label>
+</form>
+<h2>คนทำเว็บมีจุดประสงค์อะไร</h2>
+
+<form action="/action_page.php">
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="เกรด A>
+    <label for="vehicle1">ต้องการเกรด A </label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="ความรู้">
+    <label for="vehicle2">ต้องการความรู้</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="เกรด A">
+    <label for="vehicle3">เกรดไม่น้อยกว่า B </label><br>
+    <input type="submit" value="ส่งคำตอบ">
+  </form>
+  <h1>The form autocomplete attribute</h1>
+
+  <p>Fill in and submit the form, then reload the page, start to fill in the form again - and see how autocomplete works.</p>
+  
+  <p>Then, try to set autocomplete to "off".</p>
+  
+  <form action="/action_page.php" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
+    <input type="submit">
+  </form>
+  
+  <h2>โปรดเลือก</h2>
+
+<form action="/action_page.php">
+  <label for="cars">คนทำเว็บต้องการเกรด:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">A</option>
+    <option value="saab">B</option>
+    <option value="fiat">C</option>
+    <option value="audi">D</option>
+  </select>
+  <input type="submit">
+</form>
+
+<h2>Textarea</h2>
+<p>The textarea element defines a multi-line input field.</p>
+
+<form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">คนทำเว็บไซต์ต้องการเกรด A แน่นอน</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+
+<h2>Password field</h2>
+
+<p>The <strong>input type="password"</strong> defines a password field:</p>
+
+<form action="/action_page.php">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>The characters in a password field are masked (shown as asterisks or circles).</p>
+
+<h2>Show a Color Picker</h2>
+
+<p>The <strong>input type="color"</strong> is used for input fields that should contain a color.</p>
+
+<form action="/action_page.php">
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="Submit">
+</form>
+<h2>Date Field Restrictions</h2>
+
+<p>Use the min and max attributes to add restrictions to dates:</p>
+
+<form action="/action_page.php">
+  <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h1>File upload</h1>
+
+<p>Show a file-select field which allows a file to be chosen for upload:</p>
+<form action="/action_page.php">
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Number Field</h2>
+
+<p>The <strong>input type="number"</strong> defines a numeric input field.</p>
+
+<p>You can use the min and max attributes to add numeric restrictions in the input field:</p>
+
+<form action="/action_page.php">
+  <label for="quantity">Quantity (between 1 and 50):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="50">
+  <input type="submit" value="Submit">
+</form>
+
+<h1>Display a URL Input Field</h1>
+
+<p>The <strong>input type="url"</strong> is used for input fields that should contain a URL address:</p>
+
+<form action="/action_page.php">
+  <label for="homepage">Add your homepage:</label>
+  <input type="url" id="homepage" name="homepage">
+  <input type="submit" value="Submit">
+</form>
+
+<h1>Show a Time Input Control</h1>
+
+<p>The <strong>input type="time"</strong> allows the user to select a time (no time zone):</p>
+
+<p>If the browser supports it, a time picker pops up when entering the input field.</p>
+
+<form action="/action_page.php">
+  <label for="appt">Select a time:</label>
+  <input type="time" id="appt" name="appt">
+  <input type="submit" value="Submit">
+</form>
+<h1>The input size attribute</h1>
+
+<p>The size attribute specifies the width (in characters) of an input field:</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" size="50"><br>
+  <label for="pin">PIN:</label><br>
+  <input type="text" id="pin" name="pin" size="4"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h1>The input pattern attribute</h1>
+
+<p>The pattern attribute specifies a regular expression that the input element's value is checked against.</p>
+
+<form action="/action_page.php">
+  <label for="country_code">Country code:</label>
+  <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p><strong>Note:</strong> The pattern attribute of the input tag is not supported in Safari 10 (or earlier).</p>
+
+<h1>The input required attribute</h1>
+
+<p>The required attribute specifies that an input field must be filled out before submitting the form.</p>
+
+<form action="/action_page.php">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <input type="submit" value="Submit">
+</form>
+
+<p><strong>Note:</strong> The required attribute of the input tag is not supported in Safari prior version 10.1.</p>
+
+<h1>The input step attribute</h1>
+
+<p>The step attribute specifies the legal number intervals for an input element.</p>
+
+<form action="/action_page.php">
+  <label for="points">Points:</label>
+  <input type="number" id="points" name="points" step="3">
+  <input type="submit" value="Submit">
+</form>
+
+<h1>The input height and width attributes</h1>
+
+<p>The height and width attributes specify the height and width of an input type="image" element.</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="image" src="https://media1.tenor.com/images/01d9edc3640438cfe4cecaca1ff371be/tenor.gif?itemid=13875318 alt="Submit" width="80" height="80">
+</form>
+
+<p><b>Note:</b> The input type="image" sends the X and Y coordinates of the click that activated the image button.</p>
+
+<h1>The input list attribute</h1>
+
+<p>The list attribute refers to a datalist element that contains pre-defined options for an input element.</p>
+
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit" value="Submit">
+</form>
+
+<p><b>Note:</b> The datalist tag is not supported in Safari 12.0 (or earlier).</p>
+
+<h1>The autocomplete attribute</h1>
+
+<p>The autocomplete attribute specifies whether or not an input field should have autocomplete enabled.</p>
+
+<p>Fill in and submit the form, then reload the page to see how autocomplete works.</p>
+
+<p>Notice that autocomplete is "on" for the form, but "off" for the e-mail field!</p>
+
+<form action="/action_page.php" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" autocomplete="off"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<h1>The input formaction attribute</h1>
+
+<p>The formaction attribute specifies the URL of a file that will process the input when the form is submitted.</p>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+
+
+
+</body>
+
+</body>
+</html>
