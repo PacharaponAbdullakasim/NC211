@@ -1,0 +1,37 @@
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define NUM_THREADS 3/*กำหนดจำนวนเธรด = 3*/
+จำนวนเต็ม;
+โมฆะ * นักวิ่ง (เป็นโมฆะ * param);
+
+int main(int argc, ถ่าน *argv[]){
+    ผู้ปฏิบัติงาน pthread_t[NUM_THREADS]; /*ตัวระบุเธรด*/
+    pthread_attr_t attr [NUM_THREADS]; /* ชุดแอตทริบิวต์ของเธรด*/
+
+
+    ถ้า (argc > 3){
+    
+        fprintf(stderr, "การใช้งาน: Golf <integer value>\n");
+        กลับ -1;
+    }
+    สำหรับ (int i = 0;1 < NUM_THREADS; i++){
+        ถ้า (atoi(argv[i]) < 0){
+            fprintf(stderr, "%d ต้องเป็น >= 0\n", atoi(argv[i]));
+        }
+        pthread_attr_init(&attr[i]);
+        pthread_create(&workers[i],&attr[i],runner,argv[i]);
+        pthread_join(คนงาน[i],NULL);
+        printf("\nนักวิ่ง[%d",i+1);
+        printf("\nsum[%d] = %d\n\n",i+1,sum);
+        }
+    }
+    /*เธรดจะเริ่มควบคุมในฟังก์ชันนี้ */
+    โมฆะ *นักวิ่ง (โมฆะ * param){
+        int i, บน = atoi(param);
+        ผลรวม = 0;
+        สำหรับ (i = 1; 1 <= บน; i++)
+            ผลรวม += ผม;
+        pthread_exit(0);
+
+    }
